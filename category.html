@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category - VivaLuxelife</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/article.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="social-links">
+                    <a href="https://www.facebook.com/vivaluxelife" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/vivaluxelife" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/vivaluxelife" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.pinterest.com/vivaluxelife" target="_blank" rel="noopener noreferrer"><i class="fab fa-pinterest"></i></a>
+                    <a href="https://www.linkedin.com/company/vivaluxelife" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="search-icon" onclick="toggleSearch()">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="logo-section">
+            <div class="container">
+                <a href="index.html"><h1 class="logo">VivaLuxelife</h1></a>
+                <p class="tagline">Where Style Meets Substance</p>
+            </div>
+        </div>
+        
+        <nav class="nav-menu">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="category.html?cat=fashion">Fashion & Accessories</a></li>
+                    <li><a href="category.html?cat=health">Health & Beauty</a></li>
+                    <li><a href="category.html?cat=home">Home & Garden</a></li>
+                    <li><a href="category.html?cat=travel">Travel & Accommodation</a></li>
+                    <li><a href="category.html?cat=finance">Finance & Insurance</a></li>
+                    <li><a href="category.html?cat=food">Food & Beverage</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="search-overlay" id="searchOverlay">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search articles..." onkeyup="searchArticles()">
+                <button onclick="toggleSearch()"><i class="fas fa-times"></i></button>
+            </div>
+            <div id="searchResults" class="search-results"></div>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <span class="separator">/</span>
+            <span id="categoryName">Category</span>
+        </div>
+    </div>
+
+    <section class="category-page">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-title" id="categoryTitle">All Articles</h1>
+                <div class="title-underline"></div>
+                <p class="category-description" id="categoryDescription">Explore our latest editorial content</p>
+            </div>
+
+            <div class="articles-grid" id="categoryArticles">
+                <!-- Articles will be loaded dynamically -->
+                <article class="article-card" data-category="fashion">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=600&h=400&q=80" alt="Sustainable Fashion">
+                        <span class="category-badge">Fashion & Accessories</span>
+                    </div>
+                    <div class="article-content">
+                        <h3>The Rise of Sustainable Fashion: A 2025 Perspective</h3>
+                        <p class="excerpt">Discover how eco-conscious designers are revolutionizing the fashion industry with innovative materials and ethical practices.</p>
+                        <div class="article-meta">
+                            <span class="date"><i class="far fa-calendar"></i> March 15, 2025</span>
+                            <span class="read-time"><i class="far fa-clock"></i> 8 min read</span>
+                        </div>
+                        <a href="article1.html" class="read-more">Continue Reading <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="home">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&h=400&q=80" alt="Minimalist Home">
+                        <span class="category-badge">Home & Garden</span>
+                    </div>
+                    <div class="article-content">
+                        <h3>Minimalist Home Design Trends That Define 2025</h3>
+                        <p class="excerpt">Embrace simplicity and serenity with the latest minimalist design trends that transform living spaces into peaceful sanctuaries.</p>
+                        <div class="article-meta">
+                            <span class="date"><i class="far fa-calendar"></i> May 22, 2025</span>
+                            <span class="read-time"><i class="far fa-clock"></i> 9 min read</span>
+                        </div>
+                        <a href="article2.html" class="read-more">Continue Reading <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="health">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=600&h=400&q=80" alt="Natural Skincare">
+                        <span class="category-badge">Health & Beauty</span>
+                    </div>
+                    <div class="article-content">
+                        <h3>Natural Skincare Revolution: Beauty from Nature</h3>
+                        <p class="excerpt">Transform your skincare routine with natural ingredients that deliver professional results while honoring the planet.</p>
+                        <div class="article-meta">
+                            <span class="date"><i class="far fa-calendar"></i> February 10, 2025</span>
+                            <span class="read-time"><i class="far fa-clock"></i> 7 min read</span>
+                        </div>
+                        <a href="article3.html" class="read-more">Continue Reading <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="travel">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&h=400&q=80" alt="Boutique Hotels">
+                        <span class="category-badge">Travel & Accommodation</span>
+                    </div>
+                    <div class="article-content">
+                        <h3>Hidden Gems: European Boutique Hotels You Must Visit</h3>
+                        <p class="excerpt">Escape the ordinary and discover exclusive boutique accommodations that offer unparalleled luxury and authentic local experiences.</p>
+                        <div class="article-meta">
+                            <span class="date"><i class="far fa-calendar"></i> July 8, 2025</span>
+                            <span class="read-time"><i class="far fa-clock"></i> 10 min read</span>
+                        </div>
+                        <a href="article4.html" class="read-more">Continue Reading <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="food">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&h=400&q=80" alt="Plant-Based Cuisine">
+                        <span class="category-badge">Food & Beverage</span>
+                    </div>
+                    <div class="article-content">
+                        <h3>The Art of Plant-Based Gourmet Cuisine</h3>
+                        <p class="excerpt">Explore the sophisticated world of plant-based gastronomy where innovative chefs are creating extraordinary culinary experiences.</p>
+                        <div class="article-meta">
+                            <span class="date"><i class="far fa-calendar"></i> January 28, 2025</span>
+                            <span class="read-time"><i class="far fa-clock"></i> 7 min read</span>
+                        </div>
+                        <a href="article5.html" class="read-more">Continue Reading <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="finance">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=600&h=400&q=80" alt="Financial Planning">
+                        <span class="category-badge">Finance & Insurance</span>
+                    </div>
+                    <div class="article-content">
+                        <h3>Smart Investment Strategies for the Modern Professional</h3>
+                        <p class="excerpt">Navigate the complex world of investments with expert insights on building a diversified portfolio for long-term wealth.</p>
+                        <div class="article-meta">
+                            <span class="date"><i class="far fa-calendar"></i> April 5, 2025</span>
+                            <span class="read-time"><i class="far fa-clock"></i> 12 min read</span>
+                        </div>
+                        <a href="#" class="read-more">Continue Reading <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="pagination">
+                <button class="page-btn" id="prevBtn"><i class="fas fa-arrow-left"></i> Previous</button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">Next <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>VivaLuxelife</h3>
+                    <p>Your premier destination for editorial content on fashion, lifestyle, travel, and everything that makes life extraordinary.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest"></i></a>
+                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="category.html?cat=fashion">Fashion & Accessories</a></li>
+                        <li><a href="category.html?cat=health">Health & Beauty</a></li>
+                        <li><a href="category.html?cat=home">Home & Garden</a></li>
+                        <li><a href="category.html?cat=travel">Travel & Accommodation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> hello@vivaluxelife.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> New York, NY</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 VivaLuxelife. All rights reserved. Designed with passion for editorial excellence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/category.js"></script>
+</body>
+</html>
+
